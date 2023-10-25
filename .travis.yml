@@ -17,4 +17,4 @@ deploy:
   bucket_path: "aws-beanstalk"
   on:
     branch: master
-  access_key_id: $AWS-ACCESS-KEY
+  access_key_id: "$AWS-ACCESS-KEY"
