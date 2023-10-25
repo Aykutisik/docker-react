@@ -7,3 +7,14 @@ before_install:
 
 script: 
   - docker run -e CI=true aykutisik/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-north-1"
+  app: "aws-beanstalk"
+  env: "Aws-beanstalk-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-121059104983"
+  bucket_path: "aws-beanstalk"
+  on:
+    branch: master
+  access_key_id: $AWS-ACCESS-KEY
